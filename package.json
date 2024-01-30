@@ -3,7 +3,7 @@
   "description": "Webcomponent server-page following open-wc recommendations",
   "license": "MIT",
   "author": "anatolyostrovsky@gmail.com",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "main": "dist/server-page.cjs.js",
   "module": "dist/server-page.esm.js",
