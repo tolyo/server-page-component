@@ -22,7 +22,7 @@ Then:
 <server-page data-url="./cat.html"></server-page>
 ```
 
-This will initiate an AJAX request to the specified address in the `data-url` attribute, replacing the content of the component with the received response. Modifying the `data-url` attribute will trigger a new request. If the id attribute is present, the component will use `window.document` as an event listener on `partial:#{id}` namespace. This allows partial content updates to be triggered from any part of your application.
+This will initiate an AJAX request to the address, specified in the `data-url` attribute, replacing the content of the component with received response. Modifying the `data-url` attribute will trigger a new request. If the `id` attribute is present, the component will use `window.document` as an event listener on `partial:#{id}` namespace. This allows partial content updates to be triggered from any part of your application.
 
 ## Example 
 
