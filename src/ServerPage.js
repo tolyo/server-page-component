@@ -41,11 +41,11 @@ export class ServerPage extends HTMLElement {
 }
 
 /**
- * Triggers the partial with `id to be reloaded
+ * Triggers the partial with `id` to be reloaded
  *
- * @param {String} pageId
+ * @param {String} id
  * @returns
  */
-export function triggerServerPage(pageId) {
-  document.dispatchEvent(new Event(`partial:${pageId}`));
+export function triggerServerPage(id) {
+  document.dispatchEvent(new Event(`partial:${id}`));
 }

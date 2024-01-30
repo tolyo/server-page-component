@@ -12,7 +12,7 @@ $ npm i partial-component
 ## Usage
 
 ```js
-    import 'partial-component';
+import 'partial-component';
 ```
 
 Then:
