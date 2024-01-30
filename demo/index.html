@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+
+  
+  <script type="module">
+    import '../server-page.js';
+  </script>
+
+  <div id="demo">This should be replaced ...</div>
+  <server-page id="1" data-url="./test.html">This should render a test </server-page>
+  <server-page id="2" data-url="./foo.html">This should render a foo and update .demo </server-page>
+  <server-page id="3" data-url="./404.html">This should be a not found</server-page>
+</body>
+</html>
