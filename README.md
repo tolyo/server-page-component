@@ -5,14 +5,14 @@ Partial is a fragment of a web-page, loaded separately from the main content. Th
 ## Install
 
 ```bash
-$ npm i partial-component
+$ npm i server-page-component
 
 ```
 
 ## Usage
 
 ```js
-import 'partial-component';
+import 'server-page-component';
 ```
 
 Then:
@@ -39,7 +39,7 @@ Or use the helper `triggerServerPage`:
 
 ```js
 
-import { triggerServerPage } from 'partial-component';
+import { triggerServerPage } from 'server-page-component';
 
 triggerServerPage('SPY');
 
