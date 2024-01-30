@@ -3,7 +3,7 @@
   "description": "Webcomponent server-page following open-wc recommendations",
   "license": "MIT",
   "author": "anatolyostrovsky@gmail.com",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "dist/server-page.cjs.js",
   "module": "dist/server-page.esm.js",
@@ -14,8 +14,7 @@
   "scripts": {
     "analyze": "cem analyze --litelement",
     "start": "web-dev-server",
-    "lint": "./node_modules/.bin/eslint ./ --fix && prettier \"**/*.js\" --check --ignore-path .gitignore",
-    "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
+    "lint": "./node_modules/.bin/eslint ./ --fix && prettier \"**/*.js\" --write --ignore-path .gitignore",
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "pretest": "npm run build"

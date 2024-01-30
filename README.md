@@ -9,6 +9,14 @@ $ npm i server-page-component
 
 ```
 
+or
+
+```html
+<script src="
+    https://cdn.jsdelivr.net/npm/server-page-component/dist/server-page.umd.min.js
+"></script>
+```
+
 ## Usage
 
 ```js
