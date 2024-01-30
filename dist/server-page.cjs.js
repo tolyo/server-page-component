@@ -1,4 +1,8 @@
-export class ServerPage extends HTMLElement {
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+class ServerPage extends HTMLElement {
   static observedAttributes = ['data-url'];
 
   updateListener = () => this.getContent();
@@ -46,6 +50,11 @@ export class ServerPage extends HTMLElement {
  * @param {String} id
  * @returns
  */
-export function triggerServerPage(id) {
+function triggerServerPage(id) {
   document.dispatchEvent(new Event(`partial:${id}`));
 }
+
+window.customElements.define('server-page', ServerPage);
+
+exports.ServerPage = ServerPage;
+exports.triggerServerPage = triggerServerPage;
