@@ -1,8 +1,8 @@
 {
-  "name": "server-page",
+  "name": "partial-component",
   "description": "Webcomponent server-page following open-wc recommendations",
   "license": "MIT",
-  "author": "server-page",
+  "author": "anatolyostrovsky@gmail.com",
   "version": "0.0.1",
   "type": "module",
   "main": "index.js",
