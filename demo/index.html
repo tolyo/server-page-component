@@ -3,13 +3,19 @@
 <head>
   <meta charset="utf-8">
 </head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & div#demo {
+      margin-top: 20rem;
+    }
+  }
+</style>
 <body>
-
-  
-  <script type="module">
-    import '../server-page.js';
-  </script>
-
+  <script src='../dist/server-page.umd.js'></script>
   <div id="demo">This should be replaced ...</div>
   <server-page id="1" data-url="./test.html">This should render a test </server-page>
   <server-page id="2" data-url="./foo.html">This should render a foo and update .demo </server-page>
