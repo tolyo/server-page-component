@@ -67,6 +67,6 @@ Or wire it with a framework of choice:
 <div ng-app>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <input type="text" ng-model="yourName" placeholder="Enter anything">
-    <server-page id="1" url="./test.html" latch="{{ yourName }}"></server-page>
+    <server-page url="./test.html" latch="{{ yourName }}"></server-page>
 </div>
 ```
