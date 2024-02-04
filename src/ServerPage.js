@@ -1,7 +1,9 @@
 export class ServerPage extends HTMLElement {
-  static observedAttributes = ['data-url'];
+  static observedAttributes = ['url', 'latch'];
 
-  updateListener = () => this.getContent();
+  updateListener = () => {
+    this.getContent();
+  };
 
   connectedCallback() {
     if (this.getAttribute('id')) {
@@ -26,14 +28,15 @@ export class ServerPage extends HTMLElement {
   }
 
   async getContent() {
-    const { url } = this.dataset;
-    if (!url) {
+    this.url = this.url || this.getAttribute('url');
+    if (!this.url) {
       throw new Error(`
       "url" data-attribute not supplied to partial component.
       Example: <partial-component data-url="/_foo"></partial-component>
     `);
     }
-    this.innerHTML = await (await fetch(url)).text();
+
+    this.innerHTML = await (await fetch(this.url)).text();
 
     // eslint-disable-next-line no-eval
     this.querySelectorAll('script').forEach(script => eval(script.text));

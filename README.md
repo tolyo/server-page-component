@@ -19,6 +19,8 @@ or
 
 ## Usage
 
+If using module imports:
+
 ```js
 import 'server-page-component';
 ```
@@ -30,14 +32,13 @@ Then:
 <server-page data-url="./cat.html"></server-page>
 ```
 
-This will initiate an AJAX request to the address, specified in the `data-url` attribute, replacing the content of the component with received response. Modifying the `data-url` attribute will trigger a new request. If the `id` attribute is present, the component will use `window.document` as an event listener on `partial:#{id}` namespace. This allows partial content updates to be triggered from any part of your application.
+This will initiate an AJAX request to the address, specified in the `url` attribute, replacing the content of the component with received response. Modifying the `url` attribute will trigger a new request. If the `id` attribute is present, the component will use `window.document` as an event listener on `partial:#{id}` namespace. This allows partial content updates to be triggered from any part of your application. 
 
 ## Example 
 
 ```html
 <server-page id="SPY" data-url="./stock?name=SPY"></server-page>
 
-# anywhere in your code
 <script>
     document.dispatchEvent(new Event("partial:SPY"))                                                                                                                                                                         
 </script>
@@ -51,4 +52,21 @@ import { triggerServerPage } from 'server-page-component';
 
 triggerServerPage('SPY');
 
+```
+
+For updates from DOM without changing `url` attribute, a `latch` attribute 
+can be set to any value and the component will react to any changes to it. Example:
+
+```html
+<server-page data-url="./cat.html" latch="0"></server-page>
+```
+
+Or wire it with a framework of choice:
+
+```html
+<div ng-app>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <input type="text" ng-model="yourName" placeholder="Enter anything">
+    <server-page id="1" url="./test.html" latch="{{ yourName }}"></server-page>
+</div>
 ```

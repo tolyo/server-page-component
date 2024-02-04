@@ -1,5 +1,8 @@
 setup:
 	npm i
+
+start:
+	npm run start	
 	
 clean:
 	rm -rf node_modules
