@@ -29,7 +29,7 @@ Then:
 
 ```html
 # anywhere in your html
-<server-page data-url="./cat.html"></server-page>
+<server-page url="./cat.html"></server-page>
 ```
 
 This will initiate an AJAX request to the address, specified in the `url` attribute, replacing the content of the component with received response. Modifying the `url` attribute will trigger a new request. If the `id` attribute is present, the component will use `window.document` as an event listener on `partial:#{id}` namespace. This allows partial content updates to be triggered from any part of your application. 
@@ -37,7 +37,7 @@ This will initiate an AJAX request to the address, specified in the `url` attrib
 ## Example 
 
 ```html
-<server-page id="SPY" data-url="./stock?name=SPY"></server-page>
+<server-page id="SPY" url="./stock?name=SPY"></server-page>
 
 <script>
     document.dispatchEvent(new Event("partial:SPY"))                                                                                                                                                                         
@@ -58,7 +58,7 @@ For updates from DOM without changing `url` attribute, a `latch` attribute
 can be set to any value and the component will react to any changes to it. Example:
 
 ```html
-<server-page data-url="./cat.html" latch="0"></server-page>
+<server-page url="./cat.html" latch="0"></server-page>
 ```
 
 Or wire it with a framework of choice:

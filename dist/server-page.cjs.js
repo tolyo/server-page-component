@@ -36,7 +36,7 @@ class ServerPage extends HTMLElement {
     if (!this.url) {
       throw new Error(`
       "url" data-attribute not supplied to partial component.
-      Example: <partial-component data-url="/_foo"></partial-component>
+      Example: <partial-component url="/_foo"></partial-component>
     `);
     }
 
