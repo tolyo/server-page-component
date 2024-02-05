@@ -42,8 +42,8 @@
       this.url = this.url || this.getAttribute('url');
       if (!this.url) {
         throw new Error(`
-      "url" attribute not supplied to partial component.
-      Example: <partial-component url="/_foo"></partial-component>
+      "url" attribute not supplied to server-page component.
+      Example: <server-page url="/_foo"></server-page>
     `);
       }
 
