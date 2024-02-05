@@ -1,1 +1,15 @@
-test
+<div id="counter" latch="0"></div>
+
+<script>
+    const elem = document.getElementById('counter');
+    const count = window.localStorage.getItem('latch');
+    let latch;
+    if (count) {
+        latch = parseInt(count, 10);
+    } else {
+        latch = parseInt(elem.getAttribute('latch'), 10);
+    }    
+    elem.setAttribute('latch', latch + 1);
+    elem.innerText = latch;
+    window.localStorage.setItem("latch", `${latch + 1}`);
+</script>
