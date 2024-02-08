@@ -1,5 +1,5 @@
-import { ServerPage } from './ServerPage';
+import { ServerPage } from './ServerPage.js';
 
 window.customElements.define('server-page', ServerPage);
 
-export { ServerPage, triggerServerPage } from './ServerPage';
+export { ServerPage, triggerServerPage } from './ServerPage.js';

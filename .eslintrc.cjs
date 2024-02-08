@@ -23,5 +23,5 @@ module.exports = {
   },
   rules: {
   },
-  ignorePatterns: ['dist/**'],
+  ignorePatterns: ['dist/**', 'rollup.config.js'],
 };

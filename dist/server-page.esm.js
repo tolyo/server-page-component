@@ -39,7 +39,7 @@ class ServerPage extends HTMLElement {
     this.innerHTML = await (await fetch(this.url)).text();
 
     // eslint-disable-next-line no-eval
-    this.querySelectorAll('script').forEach(script => eval(script.text));
+    this.querySelectorAll('script').forEach((script) => eval(script.text));
   }
 }
 

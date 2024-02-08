@@ -1,13 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined'
-    ? factory(exports)
-    : typeof define === 'function' && define.amd
-      ? define(['exports'], factory)
-      : ((global =
-          typeof globalThis !== 'undefined' ? globalThis : global || self),
-        factory((global['server-page'] = {})));
-})(this, function (exports) {
-  'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["server-page"] = {}));
+})(this, (function (exports) { 'use strict';
 
   class ServerPage extends HTMLElement {
     static observedAttributes = ['url', 'latch'];
@@ -50,7 +45,7 @@
       this.innerHTML = await (await fetch(this.url)).text();
 
       // eslint-disable-next-line no-eval
-      this.querySelectorAll('script').forEach(script => eval(script.text));
+      this.querySelectorAll('script').forEach((script) => eval(script.text));
     }
   }
 
@@ -69,5 +64,4 @@
   exports.ServerPage = ServerPage;
   exports.triggerServerPage = triggerServerPage;
 
-  Object.defineProperty(exports, '__esModule', { value: true });
-});
+}));
