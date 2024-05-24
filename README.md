@@ -65,7 +65,7 @@ Or wire it with a framework of choice:
 
 ```html
 <div ng-app>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@angular-wave/angular.ts/dist/angular-ts.cjs.min.js"></script>
     <input type="text" ng-model="yourName" placeholder="Enter anything">
     <server-page url="./test.html" latch="{{ yourName }}"></server-page>
 </div>
